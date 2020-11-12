@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.send(receitas);
 });
 
-app.listen(port, (error) => {
+app.listen((process.env.PORT || port), (error) => {
     if (error) {
         console.log('Error when running the server');
     } else {
