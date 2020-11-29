@@ -2,3 +2,4 @@ node_modules
 passos.txt
 dist
 .env
+logs
