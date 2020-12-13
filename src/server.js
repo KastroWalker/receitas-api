@@ -1,7 +1,9 @@
+import ip from "ip";
 import app from "./app";
 
-const port = 3000;
+const ipAddress = ip.address();
+const port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT || port, () => {
-  console.log(`Server running at http://127.0.0.1:${port}`);
+app.listen(port, () => {
+  console.log(`Server running at ${ipAddress}:${port}`);
 });
