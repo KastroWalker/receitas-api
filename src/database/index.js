@@ -25,7 +25,7 @@ class Connection {
         useUnifiedTopology: true,
       })
       .then(() => {
-        console.log("Conectado com sucesso");
+        console.log("Success connecting to the database");
         this.logger.log({
           level: "info",
           message: "Conectado com sucesso",
