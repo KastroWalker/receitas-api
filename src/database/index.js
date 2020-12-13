@@ -23,6 +23,7 @@ class Connection {
       .connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useCreateIndex: true,
       })
       .then(() => {
         console.log("Success connecting to the database");

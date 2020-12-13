@@ -60,9 +60,11 @@ class RecipeController {
 
   getRecipe = async (req, res) => {
     try {
-      const { id } = req.params;
+      const { slug } = req.params;
 
-      const recipe = await Recipe.findById(id);
+      const recipe = await Recipe.findOne({ slug }, (response) => {
+        return response;
+      });
 
       return res.status(200).send(recipe);
     } catch (error) {

@@ -13,7 +13,7 @@ routes.get("/users/:id", UserController.getUser);
 routes.post("/recipes", RecipeController.create);
 routes.put("/recipes", RecipeController.update);
 routes.delete("/recipes/:id", RecipeController.delete);
-routes.get("/recipes/:id", RecipeController.getRecipe);
+routes.get("/recipes/:slug", RecipeController.getRecipe);
 routes.get("/recipes/", RecipeController.getRecipes);
 
 export default routes;

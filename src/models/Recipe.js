@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import slug from "mongoose-url-slugs";
 
 const RecipeSchema = new Schema(
   {
@@ -10,6 +11,7 @@ const RecipeSchema = new Schema(
       type: String,
       required: true,
     },
+    slug: { type: String, slug: "title" },
     time: {
       type: Number,
       required: true,
@@ -28,5 +30,7 @@ const RecipeSchema = new Schema(
     timestamps: true,
   }
 );
+
+RecipeSchema.plugin(slug("title"), { field: "slug" });
 
 export default mongoose.model("Recipes", RecipeSchema);
