@@ -15,7 +15,7 @@ class RecipeController {
 
       return res.status(200).send(recipe);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao criar Receita" });
+      return res.status(400).send({ message: "Error creating recipe" });
     }
   };
 
@@ -33,7 +33,7 @@ class RecipeController {
 
       return res.status(200).send(recipe);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao atualizar Receita" });
+      return res.status(400).send({ message: "Error updating recipe" });
     }
   };
 
@@ -54,7 +54,7 @@ class RecipeController {
 
       return res.status(200).send(recipes);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao pegar Receitas" });
+      return res.status(400).send({ message: "Error searching for recipe" });
     }
   };
 
@@ -68,7 +68,7 @@ class RecipeController {
 
       return res.status(200).send(recipe);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao achar Receita" });
+      return res.status(400).send({ message: "Error searching for Recipes" });
     }
   };
 
@@ -80,7 +80,7 @@ class RecipeController {
 
       return res.status(200).send(recipe);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao apagar Receita" });
+      return res.status(400).send({ message: "Error deleting Recipes" });
     }
   };
 }

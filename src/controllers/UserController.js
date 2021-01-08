@@ -17,7 +17,7 @@ class UserController {
 
       return res.status(200).send(user);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao criar Usuário" });
+      return res.status(400).send({ message: "Error creating user" });
     }
   };
 
@@ -36,7 +36,7 @@ class UserController {
 
       return res.send(user);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao atualizar Usuário" });
+      return res.status(400).send({ message: "Error updating User" });
     }
   };
 
@@ -48,7 +48,7 @@ class UserController {
 
       return res.status(200).send(user);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao achar Usuário" });
+      return res.status(400).send({ message: "Error searching for User" });
     }
   };
 
@@ -60,7 +60,7 @@ class UserController {
 
       return res.status(200).send(user);
     } catch (error) {
-      return res.status(400).send({ message: "Erro ao apagar Usuário" });
+      return res.status(400).send({ message: "Error deleting User" });
     }
   };
 }

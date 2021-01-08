@@ -13,4 +13,5 @@ module.exports = {
     "import/prefer-default-export": "off",
     "no-console": 0,
   },
+  "no-underscore-dangle": ["error", { allow: ["_id"] }],
 };
